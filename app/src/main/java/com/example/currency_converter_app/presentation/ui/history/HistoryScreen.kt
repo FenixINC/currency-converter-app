@@ -45,7 +45,15 @@ fun HistoryScreen(historyViewModel: HistoryViewModel) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Top
         ) {
-            item { ShowBackText(historyViewModel = historyViewModel) }
+            item {
+                Column(
+                    modifier = Modifier.fillMaxSize(),
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = Alignment.Start
+                ) {
+                    ShowBackText(historyViewModel = historyViewModel)
+                }
+            }
             item { ShowHeader() }
 
             items(
